@@ -50,7 +50,7 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.new-task-controls {
   display: flex;
   margin-bottom: 16px;
 }
