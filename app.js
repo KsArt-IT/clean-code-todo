@@ -3,7 +3,7 @@ const addTaskButton = document.getElementById('add-task');
 const incompleteTaskList = document.getElementById('incompleteTasks');
 const completedTaskList = document.getElementById('completed-tasks');
 
-const createNewTaskElement = function (taskString) {
+const createNewTaskElement = function (taskText) {
   const listItem = document.createElement('li');
 
   const checkbox = document.createElement('input');
@@ -11,7 +11,7 @@ const createNewTaskElement = function (taskString) {
   listItem.appendChild(checkbox);
 
   const label = document.createElement('label');
-  label.innerText = taskString;
+  label.innerText = taskText;
   label.className = 'task';
   listItem.appendChild(label);
 
@@ -27,9 +27,9 @@ const createNewTaskElement = function (taskString) {
 
   const deleteButton = document.createElement('button');
   deleteButton.className = 'delete';
-  const deleteButtonImg = document.createElement('img');
-  deleteButtonImg.src = './remove.svg';
-  deleteButton.appendChild(deleteButtonImg);
+  const deleteIcon = document.createElement('img');
+  deleteIcon.src = './remove.svg';
+  deleteButton.appendChild(deleteIcon);
   listItem.appendChild(deleteButton);
 
   return listItem;
