@@ -7,32 +7,31 @@ const createNewTaskElement = function (taskString) {
   const listItem = document.createElement('li');
 
   const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  listItem.appendChild(checkbox);
+
   const label = document.createElement('label');
-  const editInput = document.createElement('input');
-  const editButton = document.createElement('button');
-
-  const deleteButton = document.createElement('button');
-  const deleteButtonImg = document.createElement('img');
-
   label.innerText = taskString;
   label.className = 'task';
+  listItem.appendChild(label);
 
-  checkbox.type = 'checkbox';
+  const editInput = document.createElement('input');
   editInput.type = 'text';
   editInput.className = 'task';
+  listItem.appendChild(editInput);
 
+  const editButton = document.createElement('button');
   editButton.innerText = 'Edit';
   editButton.className = 'edit';
+  listItem.appendChild(editButton);
 
+  const deleteButton = document.createElement('button');
   deleteButton.className = 'delete';
+  const deleteButtonImg = document.createElement('img');
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
-
-  listItem.appendChild(checkbox);
-  listItem.appendChild(label);
-  listItem.appendChild(editInput);
-  listItem.appendChild(editButton);
   listItem.appendChild(deleteButton);
+
   return listItem;
 };
 
