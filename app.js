@@ -37,7 +37,7 @@ const createNewTaskElement = function (taskText) {
 };
 
 const addTask = function () {
-  //TODO: prevent creation of empty tasks.
+  // TODO: whitespace-only task is still added; trim was not added to keep the original behavior
   if (!newTaskInput.value) return;
   const listItem = createNewTaskElement(newTaskInput.value);
 
