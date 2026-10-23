@@ -29,6 +29,7 @@ const createNewTaskElement = function (taskText) {
   deleteButton.className = 'delete';
   const deleteIcon = document.createElement('img');
   deleteIcon.src = './remove.svg';
+  deleteIcon.alt = 'Delete';
   deleteButton.appendChild(deleteIcon);
   listItem.appendChild(deleteButton);
 
